@@ -3,9 +3,9 @@ A simple wrapper of phoenixdb python lib with two feature.
 
 1. Object based Load Balancing support
 
-By adding an http header "clientid", which is and uuid, 
+By adding an http header "clientid", which is an uuid, 
 invert proxy(nginx is my choice) can treat this "clientid" as
-a session id to apply "stick session".
+a session id to apply "sticky session".
 
 2. Auto alter table by adding new columns
 
