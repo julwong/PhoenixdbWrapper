@@ -100,7 +100,7 @@ class AutoAddColumnCursor(Cursor):
                 op = "ALTER TABLE %s ADD %s %s" % (table, col_name, column)
                 super(AutoAddColumnCursor, self).execute(op)
                 del columns[col_name] # we tried
-                is_to_retry = True # and we try again
+                is_to_retry = True # and we retry
 
 # same as phoenixdb.connect, except that we use 
 def connect(url, max_retries=None, cursor_factory=AutoAddColumnCursor, **kwargs):
